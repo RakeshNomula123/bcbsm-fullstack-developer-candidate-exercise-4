@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="section">
+    <h2>Upload files to compress to zip and download</h2>
+    <input type="file" multiple (change)="onFileChange($event)" />
+    <button (click)="compressAndDownload()">Compress and Download</button>
+     <!-- Display uploaded file names -->
+  <div *ngIf="selectedFiles.length > 0" class="file-list mt-5">
+    <p>Uploaded files:</p>
+    <ul>
+      <li *ngFor="let file of selectedFiles">{{ file.name }}</li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="success-message" *ngIf="showSuccessMessage">
+    <p><b>Files compressed and downloaded successfully!</b></p>
+  </div>
+</div>
+
+<style>
+/* ... Other styles ... */
+
+/* Adjusted container styles for better spacing */
+.container {
+  max-width: 800px; /* Increase the maximum width */
+  margin: auto;
+  padding: 40px; /* Increased padding for better spacing */
+  text-align: center;
+  height:800px;
+}
+
+/* Add styling for the success message div */
+.success-message {
+  background-color: #dff0d8; /* Light green background color */
+  border: 1px solid #c3e6cb; /* Light green border */
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  color: #155724; /* Dark green text color */
+}
+/* Styling for the section */
+.section {
+  background-color: #ffe1db; /* Light gray background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Heading style */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* ... Other styles ... */
+</style>
