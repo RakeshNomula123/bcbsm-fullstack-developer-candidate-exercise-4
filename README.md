@@ -26,7 +26,7 @@ npm start
 
 
 
-5. Open your web browser and navigate to `http://localhost:4200/` to view the Angular application.
+5. Open your web browser and navigate to `http://localhost:4200/login` to view the Angular application.
 
 ## Spring Boot Setup
 
